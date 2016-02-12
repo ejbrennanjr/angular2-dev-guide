@@ -1,4 +1,4 @@
-System.register(['angular2/core', 'angular2/router', './little-tour.component'], function(exports_1) {
+System.register(['angular2/core', 'angular2/router', './little-tour.component', './hero-form.component'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,7 +8,7 @@ System.register(['angular2/core', 'angular2/router', './little-tour.component'],
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, router_1, little_tour_component_1;
+    var core_1, router_1, little_tour_component_1, hero_form_component_1;
     var AppComponent;
     return {
         setters:[
@@ -20,6 +20,9 @@ System.register(['angular2/core', 'angular2/router', './little-tour.component'],
             },
             function (little_tour_component_1_1) {
                 little_tour_component_1 = little_tour_component_1_1;
+            },
+            function (hero_form_component_1_1) {
+                hero_form_component_1 = hero_form_component_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
@@ -30,7 +33,7 @@ System.register(['angular2/core', 'angular2/router', './little-tour.component'],
                     core_1.Component({
                         selector: 'my-app',
                         styleUrls: ['app/app.component.css'],
-                        template: "\n\t\t<h1>{{title}}</h1>\n\t\t<nav>\n\t\t\t<a [routerLink]=\"['LittleTour']\">Little Tour2</a>\n\t\t</nav>\n\t\t<router-outlet></router-outlet>\n\t",
+                        template: "\n\t\t<h1>{{title}}</h1>\n\t\t<nav>\n\t\t\t<a [routerLink]=\"['LittleTour']\">Little Tour</a>\n\t\t\t<a [routerLink]=\"['HeroForm']\">Hero Form</a>\n\t\t</nav>\n\t\t<router-outlet></router-outlet>\n\t",
                         directives: [router_1.ROUTER_DIRECTIVES],
                         providers: [
                             router_1.ROUTER_PROVIDERS
@@ -41,6 +44,11 @@ System.register(['angular2/core', 'angular2/router', './little-tour.component'],
                             path: '/little-tour',
                             name: 'LittleTour',
                             component: little_tour_component_1.LittleTourComponent
+                        },
+                        {
+                            path: '/hero-form',
+                            name: 'HeroForm',
+                            component: hero_form_component_1.HeroFormComponent
                         }
                     ]), 
                     __metadata('design:paramtypes', [])
@@ -51,14 +59,4 @@ System.register(['angular2/core', 'angular2/router', './little-tour.component'],
         }
     }
 });
-//<nav>
-//	<a[routerLink]="['LittleTour']" > Little Tour< /a>
-//		< /nav>
-// Hi All! 
-// 	<h1>{{title }}</h1>
-// 		< nav >
-// 		<a[routerLink]="['LittleTour']" > Little Tour< /a>
-// 			< /nav>
-// 			< router - outlet > </router-outlet>
-// 			< router - outlet > </router-outlet> 
 //# sourceMappingURL=app.component.js.map
