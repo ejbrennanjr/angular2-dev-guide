@@ -1,4 +1,4 @@
-System.register(['angular2/core', 'angular2/router', './little-tour.component', './hero-form.component'], function(exports_1) {
+System.register(['angular2/core', 'angular2/router', './little-tour/little-tour.component', './hero/hero-form.component', './heroes/hero-list.component', './heroes/hero-detail.component', './heroes/hero.service', './crisis-center/crisis-center.component', './dialog.service'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,7 +8,7 @@ System.register(['angular2/core', 'angular2/router', './little-tour.component', 
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, router_1, little_tour_component_1, hero_form_component_1;
+    var core_1, router_1, little_tour_component_1, hero_form_component_1, hero_list_component_1, hero_detail_component_1, hero_service_1, crisis_center_component_1, dialog_service_1;
     var AppComponent;
     return {
         setters:[
@@ -23,6 +23,21 @@ System.register(['angular2/core', 'angular2/router', './little-tour.component', 
             },
             function (hero_form_component_1_1) {
                 hero_form_component_1 = hero_form_component_1_1;
+            },
+            function (hero_list_component_1_1) {
+                hero_list_component_1 = hero_list_component_1_1;
+            },
+            function (hero_detail_component_1_1) {
+                hero_detail_component_1 = hero_detail_component_1_1;
+            },
+            function (hero_service_1_1) {
+                hero_service_1 = hero_service_1_1;
+            },
+            function (crisis_center_component_1_1) {
+                crisis_center_component_1 = crisis_center_component_1_1;
+            },
+            function (dialog_service_1_1) {
+                dialog_service_1 = dialog_service_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
@@ -33,9 +48,11 @@ System.register(['angular2/core', 'angular2/router', './little-tour.component', 
                     core_1.Component({
                         selector: 'my-app',
                         styleUrls: ['app/app.component.css'],
-                        template: "\n\t\t<h1>{{title}}</h1>\n\t\t<nav>\n\t\t\t<a [routerLink]=\"['LittleTour']\">Little Tour</a>\n\t\t\t<a [routerLink]=\"['HeroForm']\">Hero Form</a>\n\t\t</nav>\n\t\t<router-outlet></router-outlet>\n\t",
+                        template: "\n\t\t<h1>{{title}}</h1>\n\t\t<nav>\n\t\t\t<a [routerLink]=\"['LittleTour']\">Little Tour</a>\n\t\t\t<a [routerLink]=\"['HeroForm']\">Hero Form</a>\n\t\t\t<a [routerLink]=\"['CrisisCenter']\">Crisis Center</a>\n\t\t\t<a [routerLink]=\"['Heroes']\">Heroes</a>\n\t\t</nav>\n\t\t<router-outlet></router-outlet>\n\t",
                         directives: [router_1.ROUTER_DIRECTIVES],
                         providers: [
+                            hero_service_1.HeroService,
+                            dialog_service_1.DialogService,
                             router_1.ROUTER_PROVIDERS
                         ]
                     }),
@@ -49,6 +66,22 @@ System.register(['angular2/core', 'angular2/router', './little-tour.component', 
                             path: '/hero-form',
                             name: 'HeroForm',
                             component: hero_form_component_1.HeroFormComponent
+                        },
+                        {
+                            path: '/crisis-center/...',
+                            name: 'CrisisCenter',
+                            component: crisis_center_component_1.CrisisCenterComponent,
+                            useAsDefault: true
+                        },
+                        {
+                            path: '/heroes',
+                            name: 'Heroes',
+                            component: hero_list_component_1.HeroListComponent
+                        },
+                        {
+                            path: '/hero/:id',
+                            name: 'HeroDetail',
+                            component: hero_detail_component_1.HeroDetailComponent
                         }
                     ]), 
                     __metadata('design:paramtypes', [])
