@@ -9,6 +9,7 @@ import {CrisisCenterComponent} from './crisis-center/crisis-center.component';
 import {TohComponent} from './toh/toh.component';
 import {WikiComponent} from './wiki/wiki.component';
 import {WikiSmartComponent} from './wiki/wiki-smart.component';
+import {AttrDirComponent} from './attr-dir/attr-dir.component';
 import {DialogService} from './dialog.service';
 
 @Component({
@@ -24,6 +25,7 @@ import {DialogService} from './dialog.service';
 			<a [routerLink]="['Toh']">Toh</a> 
 			<a [routerLink]="['Wiki']">Wiki</a> 
 			<a [routerLink]="['WikiSmart']">Wiki Smart</a> 
+			<a [routerLink]="['AttrDir']">Attr Dir</a> 
 		</nav>
 		<router-outlet></router-outlet>
 	`,
@@ -75,7 +77,12 @@ import {DialogService} from './dialog.service';
 		path: '/wiki-smart',
 		name: 'WikiSmart',
 		component: WikiSmartComponent
-	}		
+	},
+	{
+		path: '/attr-dir',
+		name: 'AttrDir',
+		component: AttrDirComponent
+	}
 ])
 export class AppComponent { 
 	title = 'Angular Developer Guides';

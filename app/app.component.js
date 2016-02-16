@@ -1,4 +1,4 @@
-System.register(['angular2/core', 'angular2/router', './little-tour/little-tour.component', './hero/hero-form.component', './heroes/hero-list.component', './heroes/hero-detail.component', './heroes/hero.service', './crisis-center/crisis-center.component', './toh/toh.component', './wiki/wiki.component', './wiki/wiki-smart.component', './dialog.service'], function(exports_1) {
+System.register(['angular2/core', 'angular2/router', './little-tour/little-tour.component', './hero/hero-form.component', './heroes/hero-list.component', './heroes/hero-detail.component', './heroes/hero.service', './crisis-center/crisis-center.component', './toh/toh.component', './wiki/wiki.component', './wiki/wiki-smart.component', './attr-dir/attr-dir.component', './dialog.service'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,7 +8,7 @@ System.register(['angular2/core', 'angular2/router', './little-tour/little-tour.
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, router_1, little_tour_component_1, hero_form_component_1, hero_list_component_1, hero_detail_component_1, hero_service_1, crisis_center_component_1, toh_component_1, wiki_component_1, wiki_smart_component_1, dialog_service_1;
+    var core_1, router_1, little_tour_component_1, hero_form_component_1, hero_list_component_1, hero_detail_component_1, hero_service_1, crisis_center_component_1, toh_component_1, wiki_component_1, wiki_smart_component_1, attr_dir_component_1, dialog_service_1;
     var AppComponent;
     return {
         setters:[
@@ -45,6 +45,9 @@ System.register(['angular2/core', 'angular2/router', './little-tour/little-tour.
             function (wiki_smart_component_1_1) {
                 wiki_smart_component_1 = wiki_smart_component_1_1;
             },
+            function (attr_dir_component_1_1) {
+                attr_dir_component_1 = attr_dir_component_1_1;
+            },
             function (dialog_service_1_1) {
                 dialog_service_1 = dialog_service_1_1;
             }],
@@ -57,7 +60,7 @@ System.register(['angular2/core', 'angular2/router', './little-tour/little-tour.
                     core_1.Component({
                         selector: 'my-app',
                         styleUrls: ['app/app.component.css'],
-                        template: "\n\t\t<h1>{{title}}</h1>\n\t\t<nav>\n\t\t\t<a [routerLink]=\"['LittleTour']\">Little Tour</a>\n\t\t\t<a [routerLink]=\"['HeroForm']\">Hero Form</a>\n\t\t\t<a [routerLink]=\"['CrisisCenter']\">Crisis Center</a>\n\t\t\t<a [routerLink]=\"['Heroes']\">Heroes</a>\n\t\t\t<a [routerLink]=\"['Toh']\">Toh</a> \n\t\t\t<a [routerLink]=\"['Wiki']\">Wiki</a> \n\t\t\t<a [routerLink]=\"['WikiSmart']\">Wiki Smart</a> \n\t\t</nav>\n\t\t<router-outlet></router-outlet>\n\t",
+                        template: "\n\t\t<h1>{{title}}</h1>\n\t\t<nav>\n\t\t\t<a [routerLink]=\"['LittleTour']\">Little Tour</a>\n\t\t\t<a [routerLink]=\"['HeroForm']\">Hero Form</a>\n\t\t\t<a [routerLink]=\"['CrisisCenter']\">Crisis Center</a>\n\t\t\t<a [routerLink]=\"['Heroes']\">Heroes</a>\n\t\t\t<a [routerLink]=\"['Toh']\">Toh</a> \n\t\t\t<a [routerLink]=\"['Wiki']\">Wiki</a> \n\t\t\t<a [routerLink]=\"['WikiSmart']\">Wiki Smart</a> \n\t\t\t<a [routerLink]=\"['AttrDir']\">Attr Dir</a> \n\t\t</nav>\n\t\t<router-outlet></router-outlet>\n\t",
                         directives: [router_1.ROUTER_DIRECTIVES],
                         providers: [
                             hero_service_1.HeroService,
@@ -106,6 +109,11 @@ System.register(['angular2/core', 'angular2/router', './little-tour/little-tour.
                             path: '/wiki-smart',
                             name: 'WikiSmart',
                             component: wiki_smart_component_1.WikiSmartComponent
+                        },
+                        {
+                            path: '/attr-dir',
+                            name: 'AttrDir',
+                            component: attr_dir_component_1.AttrDirComponent
                         }
                     ]), 
                     __metadata('design:paramtypes', [])
