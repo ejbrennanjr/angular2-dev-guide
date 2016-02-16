@@ -6,7 +6,10 @@ import {HeroListComponent} from './heroes/hero-list.component';
 import {HeroDetailComponent} from './heroes/hero-detail.component';
 import {HeroService} from './heroes/hero.service';
 import {CrisisCenterComponent} from './crisis-center/crisis-center.component';
-import {DialogService} from './dialog.service'
+import {TohComponent} from './toh/toh.component';
+import {WikiComponent} from './wiki/wiki.component';
+import {WikiSmartComponent} from './wiki/wiki-smart.component';
+import {DialogService} from './dialog.service';
 
 @Component({
 	selector: 'my-app',
@@ -18,6 +21,9 @@ import {DialogService} from './dialog.service'
 			<a [routerLink]="['HeroForm']">Hero Form</a>
 			<a [routerLink]="['CrisisCenter']">Crisis Center</a>
 			<a [routerLink]="['Heroes']">Heroes</a>
+			<a [routerLink]="['Toh']">Toh</a> 
+			<a [routerLink]="['Wiki']">Wiki</a> 
+			<a [routerLink]="['WikiSmart']">Wiki Smart</a> 
 		</nav>
 		<router-outlet></router-outlet>
 	`,
@@ -54,7 +60,22 @@ import {DialogService} from './dialog.service'
 		path: '/hero/:id',
 		name: 'HeroDetail',
 		component: HeroDetailComponent
-	}
+	},
+	{
+		path: '/toh',
+		name: 'Toh',
+		component: TohComponent
+	},
+	{
+		path: '/wiki',
+		name: 'Wiki',
+		component: WikiComponent
+	},
+	{
+		path: '/wiki-smart',
+		name: 'WikiSmart',
+		component: WikiSmartComponent
+	}		
 ])
 export class AppComponent { 
 	title = 'Angular Developer Guides';
